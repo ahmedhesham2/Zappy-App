@@ -45,7 +45,7 @@ class Slack_Events(APIView) :
     # method where we handle bot user request
     def post(self, request , *args , **Kwargs):
 
-        print "in post method"
+        # print "in post method"
         slack_request_msg = request.data
 
         # checking if request coming from correct workspace
@@ -72,7 +72,7 @@ class Slack_Events(APIView) :
             # respond with hello msg
             bot_text = 'Hi <@{}> :wave:'.format(user)
             if 'go' in text.lower():
-                print "gooooooooooooooooooooooooooooooooooooooooooooooooo"
+                # print "gooooooooooooooooooooooooooooooooooooooooooooooooo"
                 slack_client.api_call(method='chat.postMessage',
                                 channel=channel,
                                 text=bot_text)
@@ -103,7 +103,7 @@ class Slack_Events(APIView) :
 
 
     def get(self, request , *args , **Kwargs):
-        print "Hello Slack"
+        # print "Hello Slack"
         return render(request, 'base.html', {})
 
 
