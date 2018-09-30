@@ -72,7 +72,6 @@ class Slack_Events(APIView) :
             # respond with hello msg
             bot_text = 'Hi <@{}> :wave:'.format(user)
             if 'go' in text.lower():
-                # print "gooooooooooooooooooooooooooooooooooooooooooooooooo"
                 slack_client.api_call(method='chat.postMessage',
                                 channel=channel,
                                 text=bot_text)
@@ -95,7 +94,7 @@ class Slack_Events(APIView) :
                         tweet_obj = Tweet(tweet_id = iter.id,tweet_text= iter.text,tweet_time = iter.created_at)
                         tweet_obj.save()
                     else :
-                        pass
+                        break
 
             return Response(status=status.HTTP_200_OK)
 
