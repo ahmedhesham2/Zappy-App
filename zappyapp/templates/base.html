@@ -1,0 +1,20 @@
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Zappy App</title>
+    <base href="/">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link href="{% static 'angular-app/styles.css' %}" rel="stylesheet" />
+</head>
+
+<body>
+    <app-root></app-root>
+    <script type="text/javascript" src="{% static 'angular-app/runtime.js' %}"></script>
+    <script type="text/javascript" src="{% static 'angular-app/polyfills.js' %}"></script>
+    <script type="text/javascript" src="{% static 'angular-app/main.js' %}"></script>
+</body>
+
+</html>
